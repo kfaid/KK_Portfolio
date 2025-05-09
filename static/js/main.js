@@ -1,5 +1,6 @@
 // Theme toggle functionality
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const darkModeLabel = document.querySelector('.dark-mode-label');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 // Check for saved theme preference or use system preference
@@ -10,9 +11,23 @@ const currentTheme = localStorage.getItem('theme') ||
 document.documentElement.setAttribute('data-theme', currentTheme);
 darkModeToggle.checked = currentTheme === 'dark';
 
-// Theme toggle event listener
+// Theme toggle event listener - handle both checkbox change and label click for better mobile support
 darkModeToggle.addEventListener('change', function() {
     const theme = this.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+});
+
+// Add click handler to the label for better mobile interaction
+darkModeLabel.addEventListener('click', function(e) {
+    // This will prevent double firing since the checkbox change event will also fire
+    e.preventDefault();
+    
+    // Toggle the checkbox
+    darkModeToggle.checked = !darkModeToggle.checked;
+    
+    // Apply theme
+    const theme = darkModeToggle.checked ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 });
@@ -44,14 +59,27 @@ window.addEventListener('scroll', () => {
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenuBtn.addEventListener('click', () => {
+mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     navLinks.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+});
+
+// Close mobile menu when clicking a nav link
+document.querySelectorAll('.nav-links .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+    if (navLinks.classList.contains('active') && 
+        !navLinks.contains(e.target) && 
+        !mobileMenuBtn.contains(e.target)) {
         navLinks.classList.remove('active');
+        document.body.classList.remove('menu-open');
     }
 });
 
