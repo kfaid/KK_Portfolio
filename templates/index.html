@@ -25,10 +25,10 @@
             <nav class="nav-links">
                 <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#education" class="nav-link">Education</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </nav>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -131,6 +131,161 @@
         </div>
     </section>
 
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <!-- Experience Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content glass-card">
+                        <div class="education-info">
+                            <h3>Data Analyst</h3>
+                            <p class="education-degree">Rubixe -  AI Solutions Company · Internship</p>
+                            <p class="education-duration">May 2025 - Present</p>
+                            <p class="education-location">Bengaluru, Karnataka, India · Remote</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/Desktop_Assistant.png') }}" alt="AI Desktop Assistant">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Desktop Assistant</h3>
+                        <p>
+                            The <strong>AI Desktop Assistant</strong> is a voice-enabled intelligent system built using 
+                            <strong>Python</strong> and <strong>OpenAI’s GPT model</strong>. It is designed to interact with users 
+                            conversationally, automate tasks, and provide instant responses — just like a personal AI companion.
+                            <br><br>
+                            It can understand natural language commands, process them intelligently, and perform real-time operations 
+                            such as opening applications, searching the web, summarizing information, or even generating creative responses.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OpenAI</span>
+                            <span class="project-tag">AI</span>
+                            <span class="project-tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/krushilkdesai/AI_Desktop_Assistant" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/Train.png') }}" alt="Train Ticket Price Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Train Ticket Price Prediction</h3>
+                        <p>
+                            The <strong>Train Ticket Price Prediction</strong> project leverages <strong>Machine Learning</strong> to accurately 
+                            estimate railway ticket prices based on various travel parameters such as source, destination, train type, journey time, 
+                            and class. The model is built using <strong>Random Forest Regression</strong>, which captures non-linear relationships 
+                            between features for high prediction accuracy.
+                            <br><br>
+                            The system performs <strong>data preprocessing</strong>, <strong>feature engineering</strong>, and 
+                            <strong>hyperparameter tuning</strong> to improve model performance. It helps passengers or railway systems forecast ticket prices 
+                            dynamically and supports data-driven decision-making in fare management.
+                        </p>
+                          
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Random Forest</span>
+                            <span class="project-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/krushilkdesai/Train_Ticket_Price_Predication" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/seo.png') }}" alt="Text To Title">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Text To Title</h3>
+                        <p>
+                            The <strong>Text To Title</strong> project is a lightweight <strong>web application</strong> built using 
+                            <strong>Flask</strong> and <strong>Selenium</strong> that automatically extracts and displays the 
+                            <strong>title</strong> of any web page from its <strong>URL</strong>. 
+                            <br><br>
+                            Users simply input a website link, and the system uses Selenium’s browser automation to fetch the HTML metadata, 
+                            parse the document, and return the page title in real time. 
+                            <br><br>
+                            Designed with simplicity and efficiency in mind, this project demonstrates seamless integration of 
+                            <strong>Python web frameworks</strong> and <strong>browser automation</strong> tools for quick web content extraction.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">Selenium</span>
+                            <span class="project-tag">Web Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/krushilkdesai/Text_To_Title" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/Cruise-MeetUp.png') }}" alt="Cruise-MeetUp">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cruise-MeetUp</h3>
+                        <p>
+                            <strong>Cruise-MeetUp</strong> is a modern, responsive <strong>web platform</strong> designed for luxury cruise events that bring together 
+                            professionals from the <strong>crypto</strong> and <strong>forex</strong> communities. The website provides an elegant interface for 
+                            networking, event promotion, and community engagement while showcasing the essence of premium travel experiences.
+                            <br><br>
+                            
+                            The platform highlights how web design and front-end technologies can be combined to deliver a professional, 
+                            visually appealing digital experience for event-based communities.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Web Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/krushilkdesai/Cruise-MeetUp" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://krushilkdesai.github.io/Cruise-MeetUp/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="container">
@@ -176,46 +331,7 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            
-            <!-- Experience Timeline -->
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content glass-card">
-                        <div class="education-info">
-                            <h3>Data Analyst</h3>
-                            <p class="education-degree">Rubixe -  AI Solutions Company · Internship</p>
-                            <p class="education-duration">May 2025 - Present</p>
-                            <p class="education-location">Bengaluru, Karnataka, India · Remote</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content glass-card">
-                        <div class="education-info">
-                            <h3>Full Stack Developer</h3>
-                            <p class="education-degree">AR Team Software Solutions · Internship</p>
-                            <p class="education-duration">May 2024 - Jul 2024 · 3 mos</p>
-                            <p class="education-location">Surat, Gujarat, India · On-site</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content glass-card">
-                        <div class="education-info">
-                            <h3>Full Stack Developer</h3>
-                            <p class="education-degree">Nucleus Lab · Internship</p>
-                            <p class="education-duration">May 2023 - Jun 2023 · 2 mos</p>
-                            <p class="education-location">Surat, Gujarat, India · On-site</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Skills Section -->
     <section id="skills" class="section">
@@ -305,100 +421,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="{{ url_for('static', filename='images/Desktop_Assistant.png') }}" alt="AI Desktop Assistant">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Desktop Assistant</h3>
-                        <p>OpenAI + Python Powered AI Desktop Assistant that Talks Like a Human</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">OpenAI</span>
-                            <span class="project-tag">AI</span>
-                            <span class="project-tag">NLP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/krushilkdesai/AI_Desktop_Assistant" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="{{ url_for('static', filename='images/Train.png') }}" alt="Train Ticket Price Prediction">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Train Ticket Price Prediction</h3>
-                        <p>Machine Learning model for predicting railway ticket prices using Random Forest Regression</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Random Forest</span>
-                            <span class="project-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/krushilkdesai/Train_Ticket_Price_Predication" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="{{ url_for('static', filename='images/seo.png') }}" alt="Text To Title">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Text To Title</h3>
-                        <p>Web application for converting URLs to titles using Flask and Selenium</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">Selenium</span>
-                            <span class="project-tag">Web Development</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/krushilkdesai/Text_To_Title" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="{{ url_for('static', filename='images/Cruise-MeetUp.png') }}" alt="Cruise-MeetUp">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cruise-MeetUp</h3>
-                        <p>A luxury cruise event platform for crypto and forex networking, featuring modern design and interactive features</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Web Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/krushilkdesai/Cruise-MeetUp" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://krushilkdesai.github.io/Cruise-MeetUp/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -414,10 +437,10 @@
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
-                            <li><a href="#education">Education</a></li>
                             <li><a href="#experience">Experience</a></li>
-                            <li><a href="#skills">Skills</a></li>
                             <li><a href="#projects">Projects</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
